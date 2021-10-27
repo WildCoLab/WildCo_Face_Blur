@@ -31,14 +31,14 @@ Miniconda can be downloaded here: https://docs.conda.io/en/latest/miniconda.html
 
 6. Open up WildCoFaceBlur.R 
 
-6a. Set your arguments:
+7. Set your arguments:
 * date_folders = TRUE or FALSE (depending on what you did in step 4)
 * img_dir_in = your "input" folder from step 4
 * img_dir_out = where you want the blurred images to go
 * blur_level = The "blurriness" applied to each human. Lower values are more obscured. I recommend values between 3 and 7. 
 * conf = The MegaDetector confidence threshold you wish to apply blurring above. This is situationally dependent on MegaDetector performance for your study area, so may     require fine tuning. 
     
-7. Run the script! The first few installation steps may take a few minutes the first time as new Python packages are installed, but otherwise you should be smooth sailing. 
+8. Run the script! The first few installation steps may take a few minutes the first time as new Python packages are installed, but otherwise you should be smooth sailing. 
 
 ## Errors
 
