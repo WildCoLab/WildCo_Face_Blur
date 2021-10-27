@@ -1,6 +1,8 @@
 # WildCo-FaceBlur
 Obscures human identities in camera trap images after processing via Microsoft MegaDetector (https://github.com/microsoft/CameraTraps/blob/master/megadetector.md)
 
+![CATH13b__2021-07-01__09-01-20](https://user-images.githubusercontent.com/50589536/139109978-8f50e193-05f6-48ac-94cd-474ae6119396.jpg)
+
 ## This project requires two files:
 ### WildCoFaceBlur.R
 This script acts as a user interface and takes care of data loading, including for running multiple sites with a single call. As most camera trap users are familiar with R (and less so with Python), this script allows us to maximize the efficiency of image processing in Python, with the familiar interface of R. This script is also accesible for those with little coding experience, as there are only four inputs. 
@@ -22,23 +24,23 @@ Miniconda can be downloaded here: https://docs.conda.io/en/latest/miniconda.html
 
 4. In the same folder, create an "input" folder with your desired name
 * Within your "input" folder, create individual sub-folders for each of your camera trap sites/deployments. 
-* Within these site specific folders, paste the MegaDetector .json file and camera trap photos corresponding to the site. 
-  
+  * You may optionally include sub-folders for date specific camera checks (e.g. 2021-09-01 to 2021-12-31)
+* Within these site (or check) specific folders, paste the MegaDetector .json file and camera trap photos corresponding to the site. 
+
 5. Open up the R project (or create a new one), setting the working directory to the folder from step 3. (with everything inside)
 
 6. Open up WildCoFaceBlur.R 
 
 6a. Set your arguments:
+* date_folders = TRUE or FALSE (depending on what you did in step 4)
 * img_dir_in = your "input" folder from step 4
 * img_dir_out = where you want the blurred images to go
-* blur_level = The "blurriness" applied to each human. Lower values are more obscured. I reccomend values between 3 and 7. 
+* blur_level = The "blurriness" applied to each human. Lower values are more obscured. I recommend values between 3 and 7. 
 * conf = The MegaDetector confidence threshold you wish to apply blurring above. This is situationally dependent on MegaDetector performance for your study area, so may     require fine tuning. 
     
 7. Run the script! The first few installation steps may take a few minutes the first time as new Python packages are installed, but otherwise you should be smooth sailing. 
 
 ## Errors
-
-The progress updates in the R script currently duplicate at times, but this does not effect the actual processing of images!
 
 IF you see the error: 
 
