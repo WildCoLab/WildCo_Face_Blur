@@ -2,7 +2,7 @@
 """
 Created on Tue Jan 12 14:28:50 2021
 
-Updated Aug 23, 2021
+Updated Nov 24, 2021
 
 Blurs camera trap images identified as human by Microsoft MegaDetector
 
@@ -11,9 +11,8 @@ mitchfen@mail.ubc.ca
 
 @author: mitchfen
 """
-# import the necessary packages
+# import the necessary packages (opencv-python installed manually via reticulate)
 import numpy as np 
-#pip install opencv-python
 import cv2 
 import json
 import os 
@@ -38,7 +37,7 @@ def anonymize_face_simple(image, factor=7.0):
 	return cv2.GaussianBlur(image, (kW, kH), 0)
 
 
-# Initializations 
+# run blurring loop on through detections JSON
 
 def face_blur(ann_file, imgs_in, imgs_out, blur, conf_lim):
     dat = json.load(open(ann_file, "r")) # read in MD ouput .JSON

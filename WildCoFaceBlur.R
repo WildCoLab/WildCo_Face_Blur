@@ -1,10 +1,11 @@
 # WildCo faceblurring script
 # Obscures human images in camera trap images
 # Requires images to be run through Microsoft MegaDetector first
+# https://github.com/microsoft/CameraTraps/blob/master/megadetector.md
 
 # M Fennell
 # mitchfen@mail.ubc.ca
-# Last updated: April 22, 2021
+# Last updated: November 24, 2021
 
 ### 0. Setup workspace ####
 
